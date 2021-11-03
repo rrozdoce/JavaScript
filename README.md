@@ -1,1 +1,1 @@
-Aprendizado de JavaScript
+Learning Javascript 🎓📊💻
