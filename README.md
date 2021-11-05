@@ -1,1 +1,1 @@
-Learning Javascript 🎓📊💻
+Learning Javascript for Web and applications
