@@ -8,3 +8,7 @@ function Pessoa(nome) {
 
 const p1 = new Pessoa('João')
 p1.falar();
+
+/*
+O operador 'new' cria uma instancia de um tipo de objeto definido pelo usuário ou de um dos tipos nativos (built-in) que possuem uma função construtora.
+*/
