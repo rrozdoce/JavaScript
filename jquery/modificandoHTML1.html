@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modificando HTML #01</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="js/jquery.js"></script>
+  </head>
+
+  <body class="conteudo exercicio">
+    <h1>Modificando HTML #01</h1>
+    <div id="conteudo1"></div>
+    <div id="conteudo2"></div>
+    <div id="conteudo3"></div>
+    <div>Sem ID!</div>
+    <script>
+      // append --> anexa
+      // prepend --> anexa, mas no inicio
+      // html --> substitui tudo
+      // text --> coloca um texto dentro o elemento
+
+      // Conteudo 1
+      // criou e add um paragrafo
+      $("#conteudo1").append("<p>1</p>");
+
+      // Conteudo 2
+      const elementos = [
+        $("<li></li>").append("Arroz"),
+        $("<li>").append("Feijão"),
+        $("<li>").append("Carne"),
+      ];
+
+      // ja faz um append de todos os itens dentro da ul
+      const lista = $("<ul><li>Sorvete</li></ul>").prepend(elementos);
+      $("#conteudo2").append(lista);
+
+      // Conteudo 3
+      $("#conteudo3")
+        .append("<h1>1</h1>")
+        .append("<h1>2</h1>")
+        .prepend("<h1>0</h1>");
+
+      // a funcao html vai substituir o conteudo dentro do conteudo que voce selecionou
+      $("#conteudo3").html("<h1>123</h1>");
+
+      // Alterando todos
+      $("div[id]").html("<strong>Todos!</strong>");
+    </script>
+  </body>
+</html>

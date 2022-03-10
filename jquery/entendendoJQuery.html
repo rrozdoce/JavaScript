@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Entendendo jQuery</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="js/jquery.js"></script>
+  </head>
+
+  <body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+      // Jquery é simbolizado pelo simbolo do dolar
+      // Jquery é uma API que tem um foco muito grande em consultar elementos da pagina e manipular esses elementos
+
+      // seleciona('div') a div e esconde(hide) depois de 5s, e depois de 5s é exibido(show)
+      $("div").hide(5000).show(5000);
+      console.log($("div").get(0)); // get(0) pega o elemento de indice 0
+
+      // decorator --> é um padrão de projeto que voce fazer uma funcao ao Objeto, fazer novas funções, sem depender da Herança
+
+      // voce pode usar o $ -->  'dolar' ,como objeto
+      // isEmptyObject --> verificar se o Objeto esta ou não vazio
+      console.log($.isEmptyObject({}));
+
+      // saber se determinado numero esta dentro de um array
+      console.log(jQuery.inArray(3, [1, 2, 3]));
+
+      // Com Jquery da pra criar Plugins
+
+      $.fn.fundoVerde = function () {
+        this.css("background-color", "green");
+        return this;
+      };
+
+      // nao vai funcionar o hide sem o return this
+      $("body").fundoVerde().hide(1000);
+    </script>
+  </body>
+</html>

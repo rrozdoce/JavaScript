@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Manipulando CSS</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="js/jquery.js"></script>
+  </head>
+
+  <body class="conteudo exercicio">
+    <h1>Manipulando CSS</h1>
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+    <div id="resultado"></div>
+    <script>
+      const fonte = $("#div1").css("font-family");
+      $("#resultado").append(`Fonte é ${fonte}`);
+
+      $("#div1").css("font-size", "3em");
+
+      // pode usar um Objeto
+      $("#div1").css({ "font-size": "3.5em", color: "yellow" });
+
+      // pode usar callback
+      $("#div1").css("font-size", function () {
+        return `${2 * 2}em`;
+      });
+
+      // add uma classe
+      $("#div2").addClass("destaque");
+
+      // ver se determinado elemento tem classe ou não
+      const temClasse = $("#div2").hasClass("destaque");
+      $("#resultado").append(`<br>Tem class? ${temClasse}`);
+
+      // remover uma classe
+      $("#div2").removeClass("destaque");
+
+      // verificar se tem uma classe, e se tiver exclui a classe, e se nao tiver coloca
+      $("#div2").toggleClass("destaque");
+      $("#div2").toggleClass("destaque");
+    </script>
+  </body>
+</html>
